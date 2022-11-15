@@ -1,0 +1,719 @@
+2022-11-14 19:01:46,811 ERROR scheduler Exception in Enqueue Events for Site demo-erp.com
+Traceback (most recent call last):
+  File "apps/frappe/frappe/utils/scheduler.py", line 70, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "apps/frappe/frappe/utils/scheduler.py", line 105, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "apps/frappe/frappe/utils/scheduler.py", line 115, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "apps/frappe/frappe/database/database.py", line 678, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "apps/frappe/frappe/__init__.py", line 1106, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "apps/frappe/frappe/model/meta.py", line 49, in get_meta
+    meta = Meta(doctype)
+  File "apps/frappe/frappe/model/meta.py", line 106, in __init__
+    super(Meta, self).__init__("DocType", doctype)
+  File "apps/frappe/frappe/model/document.py", line 118, in __init__
+    self.load_from_db()
+  File "apps/frappe/frappe/model/meta.py", line 111, in load_from_db
+    super(Meta, self).load_from_db()
+  File "apps/frappe/frappe/model/document.py", line 163, in load_from_db
+    frappe.throw(
+  File "apps/frappe/frappe/__init__.py", line 504, in throw
+    msgprint(
+  File "apps/frappe/frappe/__init__.py", line 479, in msgprint
+    _raise_exception()
+  File "apps/frappe/frappe/__init__.py", line 434, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+
+2022-11-15 10:27:48,904 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 10:27:48,905 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.employee.employee_reminders.send_reminders_in_advance_weekly for demo-erp.com
+2022-11-15 10:27:50,621 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 10:27:50,698 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.employee.employee_reminders.send_reminders_in_advance_weekly for demo-erp.com
+2022-11-15 10:27:50,876 INFO scheduler Scheduled Job Start: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 10:27:51,000 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.employee.employee_reminders.send_reminders_in_advance_monthly for demo-erp.com
+2022-11-15 10:27:51,394 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:27:51,435 INFO scheduler Scheduled Job Complete: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 10:27:51,492 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.employee.employee_reminders.send_reminders_in_advance_monthly for demo-erp.com
+2022-11-15 10:27:51,637 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 10:27:51,651 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_daily_feedback_reminder for demo-erp.com
+2022-11-15 10:27:52,223 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 10:27:52,300 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_daily_feedback_reminder for demo-erp.com
+2022-11-15 10:27:52,345 INFO scheduler Scheduled Job Start: erpnext.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual.process_loan_interest_accrual_for_demand_loans for demo-erp.com
+2022-11-15 10:27:52,416 INFO scheduler Scheduled Job Start: erpnext.non_profit.doctype.membership.membership.set_expired_status for demo-erp.com
+2022-11-15 10:27:52,702 INFO scheduler Scheduled Job Complete: erpnext.non_profit.doctype.membership.membership.set_expired_status for demo-erp.com
+2022-11-15 10:27:52,849 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email for demo-erp.com
+2022-11-15 10:27:52,982 INFO scheduler Scheduled Job Complete: erpnext.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual.process_loan_interest_accrual_for_demand_loans for demo-erp.com
+2022-11-15 10:27:53,134 INFO scheduler Scheduled Job Start: erpnext.accounts.deferred_revenue.process_deferred_accounting for demo-erp.com
+2022-11-15 10:27:53,399 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email for demo-erp.com
+2022-11-15 10:27:53,663 INFO scheduler Scheduled Job Start: erpnext.buying.doctype.supplier_quotation.supplier_quotation.set_expired_status for demo-erp.com
+2022-11-15 10:27:54,023 INFO scheduler Scheduled Job Complete: erpnext.accounts.deferred_revenue.process_deferred_accounting for demo-erp.com
+2022-11-15 10:27:54,294 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.lead.lead.daily_open_lead for demo-erp.com
+2022-11-15 10:27:54,380 INFO scheduler Scheduled Job Complete: erpnext.buying.doctype.supplier_quotation.supplier_quotation.set_expired_status for demo-erp.com
+2022-11-15 10:27:54,536 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.update_appointment_status for demo-erp.com
+2022-11-15 10:27:54,743 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.lead.lead.daily_open_lead for demo-erp.com
+2022-11-15 10:27:54,854 INFO scheduler Scheduled Job Failed: erpnext.healthcare.doctype.patient_appointment.patient_appointment.update_appointment_status for demo-erp.com
+2022-11-15 10:27:54,880 INFO scheduler Scheduled Job Start: erpnext.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual.process_loan_interest_accrual_for_term_loans for demo-erp.com
+2022-11-15 10:27:55,095 INFO scheduler Scheduled Job Start: erpnext.selling.doctype.quotation.quotation.set_expired_status for demo-erp.com
+2022-11-15 10:27:55,383 INFO scheduler Scheduled Job Complete: erpnext.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual.process_loan_interest_accrual_for_term_loans for demo-erp.com
+2022-11-15 10:27:55,513 INFO scheduler Scheduled Job Start: erpnext.loan_management.doctype.process_loan_security_shortfall.process_loan_security_shortfall.create_process_loan_security_shortfall for demo-erp.com
+2022-11-15 10:27:55,716 INFO scheduler Scheduled Job Complete: erpnext.selling.doctype.quotation.quotation.set_expired_status for demo-erp.com
+2022-11-15 10:27:55,840 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status for demo-erp.com
+2022-11-15 10:27:55,857 INFO scheduler Scheduled Job Complete: erpnext.loan_management.doctype.process_loan_security_shortfall.process_loan_security_shortfall.create_process_loan_security_shortfall for demo-erp.com
+2022-11-15 10:27:56,034 INFO scheduler Scheduled Job Start: erpnext.hr.utils.allocate_earned_leaves for demo-erp.com
+2022-11-15 10:27:56,644 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status for demo-erp.com
+2022-11-15 10:27:56,675 INFO scheduler Scheduled Job Complete: erpnext.hr.utils.allocate_earned_leaves for demo-erp.com
+2022-11-15 10:27:56,800 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts for demo-erp.com
+2022-11-15 10:27:56,839 INFO scheduler Scheduled Job Start: erpnext.hr.utils.generate_leave_encashment for demo-erp.com
+2022-11-15 10:27:57,142 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts for demo-erp.com
+2022-11-15 10:27:57,217 INFO scheduler Scheduled Job Complete: erpnext.hr.utils.generate_leave_encashment for demo-erp.com
+2022-11-15 10:27:57,330 INFO scheduler Scheduled Job Start: erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status for demo-erp.com
+2022-11-15 10:27:57,363 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation for demo-erp.com
+2022-11-15 10:27:57,747 INFO scheduler Scheduled Job Complete: erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status for demo-erp.com
+2022-11-15 10:27:57,783 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation for demo-erp.com
+2022-11-15 10:27:58,037 INFO scheduler Scheduled Job Start: erpnext.quality_management.doctype.quality_review.quality_review.review for demo-erp.com
+2022-11-15 10:27:58,050 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms for demo-erp.com
+2022-11-15 10:27:58,549 INFO scheduler Scheduled Job Complete: erpnext.quality_management.doctype.quality_review.quality_review.review for demo-erp.com
+2022-11-15 10:27:58,736 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms for demo-erp.com
+2022-11-15 10:27:59,038 INFO scheduler Scheduled Job Start: erpnext.setup.doctype.email_digest.email_digest.send for demo-erp.com
+2022-11-15 10:27:59,043 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.send_project_status_email_to_users for demo-erp.com
+2022-11-15 10:27:59,627 INFO scheduler Scheduled Job Complete: erpnext.setup.doctype.email_digest.email_digest.send for demo-erp.com
+2022-11-15 10:27:59,910 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_monthly for demo-erp.com
+2022-11-15 10:27:59,927 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.send_project_status_email_to_users for demo-erp.com
+2022-11-15 10:28:00,107 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.update_project_sales_billing for demo-erp.com
+2022-11-15 10:28:00,682 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.update_project_sales_billing for demo-erp.com
+2022-11-15 10:28:00,845 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.contract.contract.update_status_for_contracts for demo-erp.com
+2022-11-15 10:28:01,305 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.contract.contract.update_status_for_contracts for demo-erp.com
+2022-11-15 10:28:01,471 INFO scheduler Scheduled Job Start: erpnext.assets.doctype.asset.asset.make_post_gl_entry for demo-erp.com
+2022-11-15 10:28:01,471 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_monthly for demo-erp.com
+2022-11-15 10:28:01,610 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_drive.google_drive.weekly_backup for demo-erp.com
+2022-11-15 10:28:02,097 INFO scheduler Scheduled Job Complete: erpnext.assets.doctype.asset.asset.make_post_gl_entry for demo-erp.com
+2022-11-15 10:28:02,278 INFO scheduler Scheduled Job Start: erpnext.assets.doctype.asset.asset.update_maintenance_status for demo-erp.com
+2022-11-15 10:28:02,539 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_drive.google_drive.weekly_backup for demo-erp.com
+2022-11-15 10:28:02,694 INFO scheduler Scheduled Job Start: frappe.social.doctype.energy_point_log.energy_point_log.send_weekly_summary for demo-erp.com
+2022-11-15 10:28:02,896 INFO scheduler Scheduled Job Complete: erpnext.assets.doctype.asset.asset.update_maintenance_status for demo-erp.com
+2022-11-15 10:28:03,043 INFO scheduler Scheduled Job Start: erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history for demo-erp.com
+2022-11-15 10:28:03,049 INFO scheduler Scheduled Job Complete: frappe.social.doctype.energy_point_log.energy_point_log.send_weekly_summary for demo-erp.com
+2022-11-15 10:28:03,231 INFO scheduler Scheduled Job Start: frappe.desk.form.document_follow.send_weekly_updates for demo-erp.com
+2022-11-15 10:28:03,604 INFO scheduler Scheduled Job Complete: erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history for demo-erp.com
+2022-11-15 10:28:03,724 INFO scheduler Scheduled Job Complete: frappe.desk.form.document_follow.send_weekly_updates for demo-erp.com
+2022-11-15 10:28:03,766 INFO scheduler Scheduled Job Start: erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards for demo-erp.com
+2022-11-15 10:28:03,892 INFO scheduler Scheduled Job Start: frappe.desk.doctype.route_history.route_history.flush_old_route_records for demo-erp.com
+2022-11-15 10:28:04,203 INFO scheduler Scheduled Job Complete: erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards for demo-erp.com
+2022-11-15 10:28:04,288 INFO scheduler Scheduled Job Complete: frappe.desk.doctype.route_history.route_history.flush_old_route_records for demo-erp.com
+2022-11-15 10:28:04,338 INFO scheduler Scheduled Job Start: erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status for demo-erp.com
+2022-11-15 10:28:04,463 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_weekly for demo-erp.com
+2022-11-15 10:28:04,916 INFO scheduler Scheduled Job Complete: erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status for demo-erp.com
+2022-11-15 10:28:05,141 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_weekly for demo-erp.com
+2022-11-15 10:28:05,148 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.send_summary for demo-erp.com
+2022-11-15 10:28:05,262 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_weekly for demo-erp.com
+2022-11-15 10:28:05,541 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.send_summary for demo-erp.com
+2022-11-15 10:28:05,682 INFO scheduler Scheduled Job Start: erpnext.assets.doctype.asset.depreciation.post_depreciation_entries for demo-erp.com
+2022-11-15 10:28:06,150 INFO scheduler Scheduled Job Complete: erpnext.assets.doctype.asset.depreciation.post_depreciation_entries for demo-erp.com
+2022-11-15 10:28:06,367 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.task.task.set_tasks_as_overdue for demo-erp.com
+2022-11-15 10:28:06,449 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_weekly for demo-erp.com
+2022-11-15 10:28:06,603 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_drive.google_drive.daily_backup for demo-erp.com
+2022-11-15 10:28:06,938 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.task.task.set_tasks_as_overdue for demo-erp.com
+2022-11-15 10:28:07,484 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.employee.employee_reminders.send_birthday_reminders for demo-erp.com
+2022-11-15 10:28:07,670 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_drive.google_drive.daily_backup for demo-erp.com
+2022-11-15 10:28:08,054 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.employee.employee_reminders.send_birthday_reminders for demo-erp.com
+2022-11-15 10:28:08,314 INFO scheduler Scheduled Job Start: frappe.email.doctype.auto_email_report.auto_email_report.send_daily for demo-erp.com
+2022-11-15 10:28:08,744 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.employee.employee_reminders.send_work_anniversary_reminders for demo-erp.com
+2022-11-15 10:28:09,188 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.employee.employee_reminders.send_work_anniversary_reminders for demo-erp.com
+2022-11-15 10:28:09,781 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year for demo-erp.com
+2022-11-15 10:28:10,023 INFO scheduler Scheduled Job Complete: frappe.email.doctype.auto_email_report.auto_email_report.send_daily for demo-erp.com
+2022-11-15 10:28:10,207 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily for demo-erp.com
+2022-11-15 10:28:10,252 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year for demo-erp.com
+2022-11-15 10:28:10,392 INFO scheduler Scheduled Job Start: erpnext.controllers.accounts_controller.update_invoice_status for demo-erp.com
+2022-11-15 10:28:10,939 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily for demo-erp.com
+2022-11-15 10:28:11,067 INFO scheduler Scheduled Job Complete: erpnext.controllers.accounts_controller.update_invoice_status for demo-erp.com
+2022-11-15 10:28:11,214 INFO scheduler Scheduled Job Start: frappe.utils.change_log.check_for_update for demo-erp.com
+2022-11-15 10:28:11,321 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity for demo-erp.com
+2022-11-15 10:28:12,138 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity for demo-erp.com
+2022-11-15 10:28:12,640 INFO scheduler Scheduled Job Start: erpnext.support.doctype.issue.issue.auto_close_tickets for demo-erp.com
+2022-11-15 10:28:13,204 INFO scheduler Scheduled Job Complete: erpnext.support.doctype.issue.issue.auto_close_tickets for demo-erp.com
+2022-11-15 10:28:13,810 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 10:28:14,431 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 10:28:14,964 INFO scheduler Scheduled Job Start: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 10:28:15,475 INFO scheduler Scheduled Job Complete: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 10:28:16,027 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 10:28:16,549 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 10:28:16,685 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 10:28:17,540 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 10:28:18,079 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 10:28:18,705 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 10:28:19,352 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 10:28:19,695 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 10:28:19,808 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 10:28:20,189 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 10:28:20,314 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:28:20,825 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:28:20,914 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:28:21,761 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:28:21,940 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:28:22,395 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:28:22,480 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:28:22,973 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:28:23,081 INFO scheduler Scheduled Job Start: erpnext.stock.reorder_item.reorder_item for demo-erp.com
+2022-11-15 10:28:23,499 INFO scheduler Scheduled Job Complete: erpnext.stock.reorder_item.reorder_item for demo-erp.com
+2022-11-15 10:28:23,731 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 10:28:24,175 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 10:28:24,359 INFO scheduler Scheduled Job Start: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 10:28:24,785 INFO scheduler Scheduled Job Complete: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 10:28:24,931 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:28:25,304 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:28:25,437 INFO scheduler Scheduled Job Start: frappe.social.doctype.energy_point_log.energy_point_log.send_monthly_summary for demo-erp.com
+2022-11-15 10:28:25,771 INFO scheduler Scheduled Job Complete: frappe.social.doctype.energy_point_log.energy_point_log.send_monthly_summary for demo-erp.com
+2022-11-15 10:28:25,883 INFO scheduler Scheduled Job Start: frappe.email.doctype.auto_email_report.auto_email_report.send_monthly for demo-erp.com
+2022-11-15 10:28:26,617 INFO scheduler Scheduled Job Complete: frappe.email.doctype.auto_email_report.auto_email_report.send_monthly for demo-erp.com
+2022-11-15 10:28:26,770 INFO scheduler Scheduled Job Start: frappe.core.doctype.log_settings.log_settings.run_log_clean_up for demo-erp.com
+2022-11-15 10:28:27,246 INFO scheduler Scheduled Job Complete: frappe.core.doctype.log_settings.log_settings.run_log_clean_up for demo-erp.com
+2022-11-15 10:28:27,387 INFO scheduler Scheduled Job Start: frappe.core.doctype.prepared_report.prepared_report.delete_expired_prepared_reports for demo-erp.com
+2022-11-15 10:28:27,919 INFO scheduler Scheduled Job Complete: frappe.core.doctype.prepared_report.prepared_report.delete_expired_prepared_reports for demo-erp.com
+2022-11-15 10:28:28,063 INFO scheduler Scheduled Job Start: frappe.email.doctype.unhandled_email.unhandled_email.remove_old_unhandled_emails for demo-erp.com
+2022-11-15 10:28:28,492 INFO scheduler Scheduled Job Complete: frappe.email.doctype.unhandled_email.unhandled_email.remove_old_unhandled_emails for demo-erp.com
+2022-11-15 10:28:28,642 INFO scheduler Scheduled Job Start: frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed for demo-erp.com
+2022-11-15 10:28:29,152 INFO scheduler Scheduled Job Complete: frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed for demo-erp.com
+2022-11-15 10:28:29,399 INFO scheduler Scheduled Job Start: frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry for demo-erp.com
+2022-11-15 10:28:29,964 INFO scheduler Scheduled Job Complete: frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry for demo-erp.com
+2022-11-15 10:28:30,101 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_contacts.google_contacts.sync for demo-erp.com
+2022-11-15 10:28:30,701 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_contacts.google_contacts.sync for demo-erp.com
+2022-11-15 10:28:30,833 INFO scheduler Scheduled Job Start: frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points for demo-erp.com
+2022-11-15 10:28:31,219 INFO scheduler Scheduled Job Complete: frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points for demo-erp.com
+2022-11-15 10:28:31,347 INFO scheduler Scheduled Job Start: frappe.desk.form.document_follow.send_daily_updates for demo-erp.com
+2022-11-15 10:28:31,692 INFO scheduler Scheduled Job Complete: frappe.desk.form.document_follow.send_daily_updates for demo-erp.com
+2022-11-15 10:28:31,835 INFO scheduler Scheduled Job Start: frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.remove_unverified_record for demo-erp.com
+2022-11-15 10:28:32,196 INFO scheduler Scheduled Job Complete: frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.remove_unverified_record for demo-erp.com
+2022-11-15 10:28:32,358 INFO scheduler Scheduled Job Start: frappe.email.doctype.notification.notification.trigger_daily_alerts for demo-erp.com
+2022-11-15 10:28:32,750 INFO scheduler Scheduled Job Complete: frappe.email.doctype.notification.notification.trigger_daily_alerts for demo-erp.com
+2022-11-15 10:28:32,873 INFO scheduler Scheduled Job Start: frappe.sessions.clear_expired_sessions for demo-erp.com
+2022-11-15 10:28:33,208 INFO scheduler Scheduled Job Complete: frappe.sessions.clear_expired_sessions for demo-erp.com
+2022-11-15 10:28:33,351 INFO scheduler Scheduled Job Start: frappe.desk.doctype.event.event.send_event_digest for demo-erp.com
+2022-11-15 10:28:33,772 INFO scheduler Scheduled Job Complete: frappe.desk.doctype.event.event.send_event_digest for demo-erp.com
+2022-11-15 10:28:34,037 INFO scheduler Scheduled Job Start: frappe.core.doctype.error_log.error_log.set_old_logs_as_seen for demo-erp.com
+2022-11-15 10:28:34,461 INFO scheduler Scheduled Job Complete: frappe.core.doctype.error_log.error_log.set_old_logs_as_seen for demo-erp.com
+2022-11-15 10:28:34,603 INFO scheduler Scheduled Job Start: frappe.desk.notifications.clear_notifications for demo-erp.com
+2022-11-15 10:28:35,016 INFO scheduler Scheduled Job Complete: frappe.desk.notifications.clear_notifications for demo-erp.com
+2022-11-15 10:28:35,167 INFO scheduler Scheduled Job Start: frappe.email.queue.set_expiry_for_email_queue for demo-erp.com
+2022-11-15 10:28:35,579 INFO scheduler Scheduled Job Complete: frappe.email.queue.set_expiry_for_email_queue for demo-erp.com
+2022-11-15 10:28:35,743 INFO scheduler Scheduled Job Start: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 10:28:36,190 INFO scheduler Scheduled Job Complete: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 10:28:36,328 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 10:28:36,906 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 10:28:37,042 INFO scheduler Scheduled Job Start: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 10:28:37,374 INFO scheduler Scheduled Job Complete: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 10:28:37,501 INFO scheduler Scheduled Job Start: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 10:28:37,784 INFO scheduler Scheduled Job Complete: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 10:28:37,924 INFO scheduler Scheduled Job Start: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 10:28:38,236 INFO scheduler Scheduled Job Complete: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 10:28:38,348 INFO scheduler Scheduled Job Start: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 10:28:38,738 INFO scheduler Scheduled Job Complete: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 10:28:38,868 INFO scheduler Scheduled Job Start: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 10:28:39,205 INFO scheduler Scheduled Job Complete: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 10:28:39,343 INFO scheduler Scheduled Job Start: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 10:28:51,384 INFO scheduler Scheduled Job Complete: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 10:28:51,539 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:28:51,750 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:28:51,810 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:28:51,897 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:28:52,359 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:28:52,436 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:28:52,976 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:28:53,066 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:28:53,438 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:28:53,517 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:28:53,980 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:28:54,077 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:28:54,338 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:28:54,437 INFO scheduler Scheduled Job Start: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:28:54,771 INFO scheduler Scheduled Job Complete: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:28:54,897 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:28:55,301 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:28:55,427 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:28:55,933 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:29:52,027 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:30:52,285 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 10:30:52,300 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:30:52,861 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 10:30:53,030 INFO scheduler Scheduled Job Start: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 10:30:53,397 INFO scheduler Scheduled Job Complete: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 10:30:53,500 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:30:53,786 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:30:53,901 INFO scheduler Scheduled Job Start: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:30:54,190 INFO scheduler Scheduled Job Complete: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:30:54,306 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:30:54,642 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:30:54,750 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:30:55,059 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:31:52,583 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:32:52,948 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:32:53,021 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:32:53,234 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:32:53,313 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:32:53,585 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:32:53,718 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:32:54,041 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:32:54,137 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:32:54,475 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:32:54,561 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:32:54,781 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:32:54,864 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:32:55,087 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:32:55,170 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:32:55,644 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:32:55,723 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:32:56,130 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:32:56,219 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:32:56,579 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:32:56,682 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:32:56,937 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:33:53,452 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:34:53,736 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:35:54,014 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:35:54,018 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:35:54,370 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:36:54,309 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:36:54,368 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:36:54,599 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:36:54,702 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:36:55,024 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:36:55,113 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:36:55,355 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:36:55,435 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:36:55,931 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:36:56,008 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:36:56,230 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:36:56,305 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:36:56,513 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:36:56,588 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:36:56,964 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:36:57,049 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:36:57,385 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:36:57,480 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:36:57,865 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:36:57,945 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:36:58,239 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:37:54,640 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:38:54,891 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:39:55,201 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:40:55,503 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:40:55,583 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:40:55,781 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:40:55,862 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:40:56,210 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:40:56,296 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:40:56,552 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:40:56,633 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:40:56,966 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:40:57,047 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:40:57,398 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:40:57,535 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:40:57,743 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:40:57,830 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:40:58,045 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:40:58,125 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:40:58,518 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:40:58,598 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:40:58,900 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:40:58,979 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:40:59,334 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:40:59,417 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:40:59,650 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:43:11,300 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:43:11,341 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily for demo-erp.com
+2022-11-15 10:43:12,748 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily for demo-erp.com
+2022-11-15 10:44:11,644 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:44:11,739 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:44:12,059 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:44:12,139 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:44:12,540 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:44:12,620 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:44:12,984 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:44:13,072 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:44:13,543 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:44:13,635 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:44:13,853 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:44:13,932 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:44:14,166 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:44:14,261 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:44:14,757 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:44:14,840 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:44:15,430 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:44:15,511 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:44:15,841 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:44:15,924 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:44:16,162 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:45:12,096 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:45:12,137 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:45:12,499 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:45:12,660 INFO scheduler Scheduled Job Start: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:45:13,031 INFO scheduler Scheduled Job Complete: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 10:45:13,141 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:45:13,632 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 10:45:13,774 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:45:14,279 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 10:46:12,505 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:47:12,890 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:48:13,205 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:48:13,280 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:48:13,567 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:48:13,656 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:48:13,948 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:48:14,030 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:48:14,285 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:48:14,366 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:48:14,705 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:48:14,786 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:48:15,044 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:48:15,134 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:48:15,348 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:48:15,431 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:48:15,818 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:48:15,897 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:48:16,224 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:48:16,304 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:48:16,662 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:48:16,743 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:48:16,987 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:49:13,629 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:50:13,983 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:50:14,035 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:50:14,816 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:51:14,420 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:52:14,802 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:52:14,906 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:52:15,165 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:52:15,254 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:52:15,583 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:52:15,668 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:52:15,914 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:52:15,993 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:52:16,341 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:52:16,430 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:52:16,660 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:52:16,750 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:52:16,995 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:52:17,078 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:52:17,449 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:52:17,530 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:52:17,911 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:52:17,998 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:52:18,357 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:52:18,440 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:52:18,691 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:53:11,014 INFO scheduler Scheduled Job Failed: frappe.utils.change_log.check_for_update for demo-erp.com
+2022-11-15 10:53:15,242 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:54:15,558 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:55:15,876 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:55:15,883 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:55:16,218 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 10:56:16,183 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:56:16,259 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:56:16,441 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 10:56:16,519 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:56:16,812 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 10:56:16,889 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:56:17,119 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 10:56:17,197 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:56:17,529 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 10:56:17,609 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:56:17,822 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 10:56:17,908 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:56:18,116 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 10:56:18,209 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:56:18,567 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 10:56:18,646 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:56:18,937 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 10:56:19,015 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:56:19,318 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 10:56:19,395 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:56:19,625 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 10:57:16,585 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:58:17,306 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 10:59:17,644 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:00:17,861 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 11:00:17,971 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 11:00:18,342 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:00:18,589 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 11:00:18,704 INFO scheduler Scheduled Job Start: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 11:00:18,807 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 11:00:18,910 INFO scheduler Scheduled Job Start: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 11:00:19,132 INFO scheduler Scheduled Job Complete: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 11:00:19,406 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 11:00:19,478 INFO scheduler Scheduled Job Complete: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 11:00:19,588 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 11:00:19,928 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 11:00:20,057 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 11:00:20,164 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 11:00:20,573 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 11:00:20,681 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 11:00:21,177 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 11:00:21,287 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 11:00:21,701 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 11:00:21,814 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 11:00:22,193 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 11:00:22,296 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:00:22,545 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:00:22,624 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:00:22,891 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:00:22,967 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:00:23,261 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:00:23,338 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:00:23,666 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:00:23,744 INFO scheduler Scheduled Job Start: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 11:00:24,225 INFO scheduler Scheduled Job Complete: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 11:00:24,337 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:00:24,686 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:00:24,786 INFO scheduler Scheduled Job Start: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 11:00:25,240 INFO scheduler Scheduled Job Complete: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 11:00:25,345 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 11:00:26,016 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 11:00:26,186 INFO scheduler Scheduled Job Start: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 11:00:26,615 INFO scheduler Scheduled Job Complete: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 11:00:26,715 INFO scheduler Scheduled Job Start: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 11:00:27,281 INFO scheduler Scheduled Job Complete: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 11:00:27,435 INFO scheduler Scheduled Job Start: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 11:00:27,837 INFO scheduler Scheduled Job Complete: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 11:00:27,955 INFO scheduler Scheduled Job Start: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 11:00:28,389 INFO scheduler Scheduled Job Complete: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 11:00:28,585 INFO scheduler Scheduled Job Start: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 11:00:28,950 INFO scheduler Scheduled Job Complete: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 11:00:29,101 INFO scheduler Scheduled Job Start: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 11:00:40,210 INFO scheduler Scheduled Job Complete: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 11:00:40,336 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:00:40,591 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:00:40,709 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:00:40,941 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:00:41,044 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:00:41,418 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:00:41,502 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:00:41,823 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:00:41,903 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:00:42,276 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:00:42,358 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:00:42,601 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:00:42,680 INFO scheduler Scheduled Job Start: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 11:00:43,082 INFO scheduler Scheduled Job Complete: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 11:00:43,192 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 11:00:43,602 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 11:00:43,719 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 11:00:44,104 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 11:01:18,706 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:02:19,033 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:03:19,397 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:04:19,735 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:04:19,842 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:04:20,045 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:04:20,123 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:04:20,389 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:04:20,466 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:04:20,718 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:04:20,796 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:04:21,182 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:04:21,260 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:04:21,475 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:04:21,553 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:04:21,757 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:04:21,849 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:04:22,201 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:04:22,279 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:04:22,568 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:04:22,648 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:04:22,948 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:04:23,026 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:04:23,253 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:05:20,181 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:05:20,194 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:05:20,602 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:06:20,548 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:07:20,860 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:08:21,191 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:08:21,291 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:08:21,573 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:08:21,659 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:08:21,990 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:08:22,072 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:08:22,376 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:08:22,456 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:08:22,825 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:08:22,922 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:08:23,158 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:08:23,250 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:08:23,486 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:08:23,590 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:08:24,068 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:08:24,147 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:08:24,523 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:08:24,608 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:08:25,002 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:08:25,135 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:08:25,620 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:09:21,682 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:10:22,066 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:10:23,019 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:10:24,768 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 11:11:22,424 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:12:22,738 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:12:22,817 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:12:23,176 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 11:12:23,256 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:12:23,617 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 11:12:23,693 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:12:24,068 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 11:12:24,146 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:12:24,919 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 11:12:25,004 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:12:25,219 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 11:12:25,311 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:12:25,532 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 11:12:25,623 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:12:26,689 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 11:12:26,768 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:12:27,137 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 11:12:27,225 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:12:27,566 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 11:12:27,645 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:12:27,882 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 11:13:23,158 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:14:23,448 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:15:23,771 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:16:24,168 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:17:24,542 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:18:24,935 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:19:25,328 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:20:25,701 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:21:26,110 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:22:26,479 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:23:26,869 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:24:27,299 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:25:27,694 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:26:28,091 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:27:28,484 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:28:28,875 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:29:29,263 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:30:29,663 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:31:30,069 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:32:30,498 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:33:30,957 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:34:31,387 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:35:31,864 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:36:32,345 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:37:32,773 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:38:33,275 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:39:33,753 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:40:34,248 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:41:34,680 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:42:35,085 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:43:35,764 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:44:36,215 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:45:36,694 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:46:37,180 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:47:37,632 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:48:38,045 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:49:38,482 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:50:38,979 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:51:39,482 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:52:39,913 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:53:40,318 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:54:40,726 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:55:41,130 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:56:41,544 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:57:41,980 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:58:42,399 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 11:59:42,793 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:00:43,329 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:01:43,881 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:02:44,682 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:03:45,249 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:04:45,920 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:05:46,457 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:06:47,057 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:07:47,584 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:08:48,128 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:09:48,714 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:10:49,237 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:11:49,627 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 12:11:49,633 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 12:11:49,867 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:11:51,553 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts for demo-erp.com
+2022-11-15 12:11:51,663 INFO scheduler Scheduled Job Start: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 12:11:52,246 INFO scheduler Scheduled Job Complete: erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries for demo-erp.com
+2022-11-15 12:11:52,410 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 12:11:52,754 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.connectors.shopify_connection.sync_old_orders for demo-erp.com
+2022-11-15 12:11:52,957 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.subscription.subscription.process_all for demo-erp.com
+2022-11-15 12:11:52,960 INFO scheduler Scheduled Job Start: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 12:11:53,373 INFO scheduler Scheduled Job Complete: erpnext.support.doctype.issue.issue.set_service_level_agreement_variance for demo-erp.com
+2022-11-15 12:11:53,522 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 12:11:53,926 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.collect_project_status for demo-erp.com
+2022-11-15 12:11:54,036 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 12:11:54,450 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.hourly_reminder for demo-erp.com
+2022-11-15 12:11:54,702 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 12:11:55,269 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization for demo-erp.com
+2022-11-15 12:11:55,412 INFO scheduler Scheduled Job Start: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 12:11:55,948 INFO scheduler Scheduled Job Complete: erpnext.erpnext_integrations.doctype.amazon_mws_settings.amazon_mws_settings.schedule_get_order_details for demo-erp.com
+2022-11-15 12:11:56,064 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 12:11:56,404 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails for demo-erp.com
+2022-11-15 12:11:56,531 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 12:11:56,812 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 12:11:56,889 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 12:11:57,165 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 12:11:57,243 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 12:11:57,521 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 12:11:57,599 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 12:11:57,942 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 12:11:58,019 INFO scheduler Scheduled Job Start: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 12:11:58,615 INFO scheduler Scheduled Job Complete: erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs for demo-erp.com
+2022-11-15 12:11:58,783 INFO scheduler Scheduled Job Start: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 12:11:59,849 INFO scheduler Scheduled Job Complete: erpnext.utilities.doctype.video.video.update_youtube_data for demo-erp.com
+2022-11-15 12:12:00,137 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 12:12:00,501 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for demo-erp.com
+2022-11-15 12:12:00,632 INFO scheduler Scheduled Job Start: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 12:12:01,125 INFO scheduler Scheduled Job Complete: frappe.email.doctype.newsletter.newsletter.send_scheduled_email for demo-erp.com
+2022-11-15 12:12:01,247 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 12:12:02,991 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.google_calendar.google_calendar.sync for demo-erp.com
+2022-11-15 12:12:03,162 INFO scheduler Scheduled Job Start: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 12:12:03,508 INFO scheduler Scheduled Job Complete: frappe.desk.form.document_follow.send_hourly_updates for demo-erp.com
+2022-11-15 12:12:03,626 INFO scheduler Scheduled Job Start: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 12:12:03,952 INFO scheduler Scheduled Job Complete: frappe.deferred_insert.save_to_db for demo-erp.com
+2022-11-15 12:12:04,115 INFO scheduler Scheduled Job Start: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 12:12:04,552 INFO scheduler Scheduled Job Complete: frappe.desk.page.backups.backups.delete_downloadable_backups for demo-erp.com
+2022-11-15 12:12:04,692 INFO scheduler Scheduled Job Start: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 12:12:05,503 INFO scheduler Scheduled Job Complete: frappe.utils.error.collect_error_snapshots for demo-erp.com
+2022-11-15 12:12:05,666 INFO scheduler Scheduled Job Start: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 12:12:05,974 INFO scheduler Scheduled Job Complete: frappe.model.utils.user_settings.sync_user_settings for demo-erp.com
+2022-11-15 12:12:06,109 INFO scheduler Scheduled Job Start: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 12:12:06,471 INFO scheduler Scheduled Job Complete: frappe.model.utils.link_count.update_link_count for demo-erp.com
+2022-11-15 12:12:06,615 INFO scheduler Scheduled Job Start: frappe.monitor.flush for demo-erp.com
+2022-11-15 12:12:06,829 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for demo-erp.com
+2022-11-15 12:12:06,919 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 12:12:07,134 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for demo-erp.com
+2022-11-15 12:12:07,223 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 12:12:07,581 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for demo-erp.com
+2022-11-15 12:12:07,660 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 12:12:07,948 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for demo-erp.com
+2022-11-15 12:12:08,026 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 12:12:08,346 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for demo-erp.com
+2022-11-15 12:12:08,425 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for demo-erp.com
+2022-11-15 12:12:08,664 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for demo-erp.com
+2022-11-15 12:12:08,743 INFO scheduler Scheduled Job Start: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 12:12:09,190 INFO scheduler Scheduled Job Complete: frappe.twofactor.delete_all_barcodes_for_users for demo-erp.com
+2022-11-15 12:12:09,307 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 12:12:09,930 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for demo-erp.com
+2022-11-15 12:12:10,080 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 12:12:10,699 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for demo-erp.com
+2022-11-15 12:12:50,185 INFO scheduler Scheduled Job Start: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 12:12:50,263 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:12:50,483 INFO scheduler Scheduled Job Complete: erpnext.crm.doctype.social_media_post.social_media_post.process_scheduled_social_media_posts for demo-erp.com
+2022-11-15 12:12:50,573 INFO scheduler Scheduled Job Start: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 12:12:50,867 INFO scheduler Scheduled Job Complete: erpnext.hr.doctype.interview.interview.send_interview_reminder for demo-erp.com
+2022-11-15 12:12:50,952 INFO scheduler Scheduled Job Start: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 12:12:51,344 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for demo-erp.com
+2022-11-15 12:12:51,427 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 12:12:51,770 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for demo-erp.com
+2022-11-15 12:13:50,618 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:14:50,965 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:15:51,290 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:16:51,693 DEBUG scheduler Queued events for site demo-erp.com
+2022-11-15 12:17:52,088 DEBUG scheduler Queued events for site demo-erp.com

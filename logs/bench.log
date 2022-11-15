@@ -1,0 +1,66 @@
+2022-11-14 18:51:42,574 DEBUG cd /home/e-orchids/frappe-bench && /usr/bin/virtualenv --quiet env -p python3
+2022-11-14 18:51:48,950 DEBUG cd /home/e-orchids/frappe-bench && /home/e-orchids/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2022-11-14 18:51:57,617 LOG Getting frappe
+2022-11-14 18:51:57,617 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-13 --depth 1 --origin upstream
+2022-11-14 18:52:30,772 LOG Installing frappe
+2022-11-14 18:52:30,772 DEBUG cd /home/e-orchids/frappe-bench && /home/e-orchids/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/e-orchids/frappe-bench/apps/frappe 
+2022-11-14 18:54:11,832 DEBUG cd /home/e-orchids/frappe-bench/apps/frappe && yarn install
+2022-11-14 18:56:23,188 DEBUG cd frappe-bench && bench build
+2022-11-14 18:56:23,522 INFO /usr/local/bin/bench build
+2022-11-14 18:57:45,086 LOG setting up backups
+2022-11-14 18:57:45,326 LOG backups were set up
+2022-11-14 18:57:45,326 INFO Bench frappe-bench initialized
+2022-11-14 18:59:38,239 INFO /usr/local/bin/bench start
+2022-11-14 18:59:43,639 INFO /usr/local/bin/bench watch
+2022-11-14 18:59:43,711 INFO /usr/local/bin/bench worker --queue long
+2022-11-14 18:59:43,717 INFO /usr/local/bin/bench serve --port 8000
+2022-11-14 18:59:43,747 INFO /usr/local/bin/bench worker --queue short
+2022-11-14 18:59:43,779 INFO /usr/local/bin/bench schedule
+2022-11-14 18:59:43,851 INFO /usr/local/bin/bench worker --queue default
+2022-11-14 19:01:22,040 INFO /usr/local/bin/bench new-site demo-erp.com
+2022-11-14 19:05:31,530 INFO /usr/local/bin/bench use demo-erp.com
+2022-11-14 19:05:55,853 INFO /usr/local/bin/bench get-app payments
+2022-11-14 19:13:01,495 WARNING /usr/local/bin/bench get-app payments executed with exit code 1
+2022-11-14 19:13:14,956 INFO /usr/local/bin/bench get-app payments
+2022-11-14 19:13:30,174 WARNING /usr/local/bin/bench get-app payments executed with exit code 1
+2022-11-15 10:08:43,168 INFO /usr/local/bin/bench start
+2022-11-15 10:08:52,443 INFO /usr/local/bin/bench worker --queue default
+2022-11-15 10:08:52,502 INFO /usr/local/bin/bench schedule
+2022-11-15 10:08:52,550 INFO /usr/local/bin/bench serve --port 8000
+2022-11-15 10:08:52,550 INFO /usr/local/bin/bench watch
+2022-11-15 10:08:52,660 INFO /usr/local/bin/bench worker --queue short
+2022-11-15 10:08:52,689 INFO /usr/local/bin/bench worker --queue long
+2022-11-15 10:09:26,408 INFO /usr/local/bin/bench get-app payments
+2022-11-15 10:09:28,633 LOG Getting payments
+2022-11-15 10:09:28,633 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2022-11-15 10:09:31,279 LOG Installing payments
+2022-11-15 10:09:31,279 DEBUG cd /home/e-orchids/frappe-bench && /home/e-orchids/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/e-orchids/frappe-bench/apps/payments 
+2022-11-15 10:09:37,208 DEBUG bench build --app payments
+2022-11-15 10:09:37,601 INFO /usr/local/bin/bench build --app payments
+2022-11-15 10:09:48,234 INFO /usr/local/bin/bench get-app erpnext --branch version-13
+2022-11-15 10:09:50,170 LOG Getting erpnext
+2022-11-15 10:09:50,171 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-13 --depth 1 --origin upstream
+2022-11-15 10:10:20,993 LOG Installing erpnext
+2022-11-15 10:10:20,993 DEBUG cd /home/e-orchids/frappe-bench && /home/e-orchids/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/e-orchids/frappe-bench/apps/erpnext 
+2022-11-15 10:11:12,180 DEBUG cd /home/e-orchids/frappe-bench/apps/erpnext && yarn install
+2022-11-15 10:11:14,130 DEBUG bench build --app erpnext
+2022-11-15 10:11:14,466 INFO /usr/local/bin/bench build --app erpnext
+2022-11-15 10:11:50,164 INFO /usr/local/bin/bench --site demo-erp.com install-app erpnext
+2022-11-15 10:22:44,539 INFO /usr/local/bin/bench start
+2022-11-15 10:22:46,610 INFO /usr/local/bin/bench worker --queue long
+2022-11-15 10:22:46,629 INFO /usr/local/bin/bench serve --port 8000
+2022-11-15 10:22:46,636 INFO /usr/local/bin/bench worker --queue default
+2022-11-15 10:22:46,655 INFO /usr/local/bin/bench worker --queue short
+2022-11-15 10:22:46,684 INFO /usr/local/bin/bench schedule
+2022-11-15 10:22:46,724 INFO /usr/local/bin/bench watch
+2022-11-15 10:39:09,622 INFO /usr/local/bin/bench set-config developer_mode 1
+2022-11-15 10:39:42,415 INFO /usr/local/bin/bench clear cache
+2022-11-15 10:39:43,491 WARNING /usr/local/bin/bench clear cache executed with exit code 2
+2022-11-15 10:41:58,027 INFO /usr/local/bin/bench restart
+2022-11-15 10:42:07,375 INFO /usr/local/bin/bench start
+2022-11-15 10:42:09,352 INFO /usr/local/bin/bench worker --queue short
+2022-11-15 10:42:09,383 INFO /usr/local/bin/bench serve --port 8000
+2022-11-15 10:42:09,515 INFO /usr/local/bin/bench worker --queue default
+2022-11-15 10:42:09,542 INFO /usr/local/bin/bench schedule
+2022-11-15 10:42:09,565 INFO /usr/local/bin/bench watch
+2022-11-15 10:42:09,574 INFO /usr/local/bin/bench worker --queue long
